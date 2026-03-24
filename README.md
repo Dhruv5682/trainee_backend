@@ -1,26 +1,29 @@
-# Trainee Full-Stack Project
+# Trainee Backend
 
-This workspace contains:
-- `trainee_backend`: Node.js + Express + MySQL REST API
+Node.js + Express REST API for item management, connected to MySQL.
 
-## Folder Structure
+## Project Structure
 
 ```text
 trainee_backend/
   src/
-    controllers/
-    routes/
-    models/
     config/
+      db.js
+    controllers/
+      itemController.js
+    models/
+      itemModel.js
+    routes/
+      itemRoutes.js
     services/
-  .env
-  .env.example
-  .gitignore
+      itemService.js
   package.json
   server.js
+```
 
+## Database Setup
 
-## MySQL Table SQL
+Run this SQL in MySQL:
 
 ```sql
 CREATE DATABASE IF NOT EXISTS trainee_db;
@@ -34,7 +37,7 @@ CREATE TABLE IF NOT EXISTS items (
 );
 ```
 
-## Backend Environment Variables
+## Environment Variables
 
 Create `trainee_backend/.env`:
 
@@ -46,17 +49,7 @@ DB_NAME=trainee_db
 PORT=5000
 ```
 
-## Frontend Environment Variables
-
-Optional `trainee_frontend/.env`:
-
-```env
-VITE_API_BASE_URL=http://localhost:5000/api
-```
-
-## Run On Ubuntu
-
-### Backend
+## Run Backend
 
 ```bash
 cd trainee_backend
@@ -64,24 +57,26 @@ npm install
 npm start
 ```
 
-API endpoints:
+For development with auto-reload:
+
+```bash
+npm run dev
+```
+
+## API Endpoints
+
 - `GET /api/items`
 - `POST /api/items`
 - `PUT /api/items/:id`
 
-### Frontend
+## Screenshots
 
-```bash
-cd trainee_frontend
-npm install
-npm run dev
-```
+Add backend screenshots here:
 
-The Vite dev server runs at `http://localhost:5173` by default.
+- API testing - Get Items
+- API testing - Create Item
+- API testing - Update Item
 
-## Notes For Later Docker/K8s
+Example path format:
 
-- Config is externalized through environment variables.
-- Backend and frontend are separate services with independent dependencies.
-- Source is organized in modular layers (route -> controller -> service -> model).
-- `.env` and build artifacts are ignored via `.gitignore`.
+`screenshots/backend/get-items.png`
