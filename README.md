@@ -4,7 +4,8 @@ Node.js + Express REST API for item management, connected to MySQL.
 
 ## Project Structure
 
-```text
+```
+text
 trainee_backend/
   src/
     config/
@@ -71,12 +72,7 @@ npm run dev
 
 ## Screenshots
 
-Add backend screenshots here:
+<img width="308" height="227" alt="image" src="https://github.com/user-attachments/assets/1fe1de35-5ebf-42fb-868f-1d4d36a29862" />
 
-- API testing - Get Items
-- API testing - Create Item
-- API testing - Update Item
+<img width="805" height="486" alt="image" src="https://github.com/user-attachments/assets/8a90763a-1c44-4332-8b83-bddc50f8a9b2" />
 
-Example path format:
-
-`screenshots/backend/get-items.png`
